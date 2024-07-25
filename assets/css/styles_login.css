@@ -1,0 +1,119 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.login-container {
+    background-color: #fff;
+    padding: 40px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center; 
+}
+
+.logo {
+    display: block;
+    margin: 0 auto 1px auto; 
+}
+
+.form-title {
+    font-size: 28px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 1px; 
+    text-align: center; 
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+
+.form-group {
+    margin-bottom: 15px;
+    width: 100%;
+    position: relative; 
+}
+
+.form-group input[type="email"],
+.form-group input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+    margin-top: 5px;
+}
+
+.password-group {
+    position: relative;
+    width: 100%;
+}
+
+.password-group input[type="password"],
+.password-group input[type="text"] {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+    margin-top: 5px;
+    width: 100%; 
+}
+
+.password-group input[type="password"] {
+    padding-right: 30px; 
+}
+
+.password-toggle {
+    position: absolute;
+    top: 50%;
+    right: 10px; 
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #888;
+    z-index: 1; 
+}
+
+.password-toggle i {
+    font-size: 18px;
+}
+
+
+button[type="submit"] {
+    background-color: #435d7d;
+    color: #fff;
+    border: none;
+    padding: 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+    width: 100%;
+}
+
+button[type="submit"]:hover {
+    background-color: #2e4a6b;
+}
+
+.error-message {
+    color: red;
+    margin-top: 10px;
+    padding: 12px;
+    border: 1px solid red;
+    border-radius: 5px;
+    background-color: #ffe6e6;
+    text-align: center;
+    font-weight: bold;
+    
+}
