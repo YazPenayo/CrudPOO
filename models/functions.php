@@ -16,6 +16,39 @@ class User {
         return $stmt->fetch(PDO::FETCH_ASSOC);
     }
 }
+
+class NewUser {
+    private $db;
+
+    public function __construct($dbConnection) {
+        $this->db = $dbConnection;
+    }
+    public function registerUser($nombre, $apellido, $email, $password) {
+
+        if ($this->getUserByEmail($email)) {
+            return false; 
+        }
+
+        $sql = "INSERT INTO users (user_name, last_name, email, password, id_rol) VALUES (:user_name, :last_name, :email, :password, :id_rol)";
+        $stmt = $this->db->prepare($sql);
+
+        $stmt->bindParam(':user_name', $nombre);
+        $stmt->bindParam(':last_name', $apellido);
+        $stmt->bindParam(':email', $email);
+        $stmt->bindParam(':password', $password);
+        $id_rol = 1;
+        $stmt->bindParam(':id_rol', $id_rol, PDO::PARAM_INT);
+        return $stmt->execute();
+    }
+
+    private function getUserByEmail($email) {
+        $stmt = $this->db->prepare("SELECT * FROM users WHERE email = :email");
+        $stmt->bindParam(':email', $email);
+        $stmt->execute();
+        return $stmt->fetch(PDO::FETCH_ASSOC);
+    }
+}
+
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ////CLIENTES/////
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

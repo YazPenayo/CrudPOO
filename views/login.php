@@ -23,6 +23,15 @@
                     <i class="fas fa-eye"></i>
                 </span>
             </div>
+
+                <?php if(isset($_SESSION['success_message'])): ?>
+                    <div class="form-group">
+                        <div id="success-message" class="success_message"><?php echo $_SESSION['success_message']; ?></div>
+                    </div>
+                    <?php unset($_SESSION['success_message']); ?>
+                <?php endif; ?>
+
+
                 <?php if(isset($_SESSION['error_message'])): ?>
                     <div class="form-group"> <!-- Asegura que el mensaje de error esté dentro del mismo tipo de contenedor -->
                         <div id="error-message" class="error-message"><?php echo $_SESSION['error_message']; ?></div>
@@ -31,6 +40,7 @@
                 <?php endif; ?>
                 
                 <button type="submit">Iniciar Sesión</button>
+                <p class="register-prompt">¿No estás registrado? <a href="register.php">Regístrate aquí</a></p>
             </form>
         </div>
     <script>

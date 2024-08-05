@@ -64,6 +64,10 @@ if ($cliente) {
                             </div>
                             <div class="col-xs-6">
                                 <a href="#addEmployeeModal" class="btn btn-success" data-toggle="modal"><i class="material-icons">&#xE147;</i> <span>Pedido</span></a>
+                                <a href="../index.php" class="btn btn-primary">
+                                    <i class="material-icons">&#xE88A;</i>
+                                    <span>Inicio</span>
+                                </a>
                             </div>
                         </div>
                     </div>

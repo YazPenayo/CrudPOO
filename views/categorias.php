@@ -59,6 +59,10 @@ $categorias = $readProductos->getCategorias();
                                 <i class="material-icons">&#xE8B6;</i>
                                 <span>Marcas</span>
                             </a>
+                            <a href="../index.php" class="btn btn-primary">
+                                <i class="material-icons">&#xE88A;</i> <!-- Aquí puedes usar cualquier ícono que te guste -->
+                                <span>Inicio</span>
+                            </a>
                         </div>
                     </div>
                 </div>

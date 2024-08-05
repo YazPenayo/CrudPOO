@@ -4,12 +4,12 @@ require_once '../models/functions.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Recibir y validar los datos del formulario
-    $nombre = ucfirst($_POST["nombre"]);
-    $apellido = ucfirst($_POST["apellido"]);
-    $direccion = ucwords($_POST["direccion"]);
-    $email = $_POST["email"];
-    $telefono = $_POST["telefono"];
-    $dni = $_POST["dni"];
+    $nombre = ucfirst(trim($_POST["nombre"]));
+    $apellido = ucfirst(trim($_POST["apellido"]));
+    $direccion = ucwords(trim($_POST["direccion"]));
+    $email = trim($_POST["email"]);
+    $telefono = trim($_POST["telefono"]);
+    $dni = trim($_POST["dni"]);
 
     $database = new Database();
     $db = $database->getConnection();

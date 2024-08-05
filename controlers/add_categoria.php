@@ -3,7 +3,7 @@ require_once '../models/database.php';
 require_once '../models/functions.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $categoria = ucwords($_POST["categoria"]);
+    $categoria = ucwords(trim($_POST["categoria"]));
 
     $database = new Database();
     $db = $database->getConnection();
