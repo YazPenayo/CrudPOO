@@ -1,5 +1,5 @@
 ## Gestión de Clientes y Control de Stock
-## Descripción del Proyecto##
+## Descripción del Proyecto
 Este proyecto es una aplicación web desarrollada en PHP utilizando Programación Orientada a Objetos (POO). Está diseñada para la gestión eficiente de clientes y el control de inventario de productos. La aplicación consta de cinco módulos principales que permiten realizar operaciones CRUD (Crear, Leer, Actualizar, Eliminar) sobre clientes, pedidos, productos, marcas y categorías. El sistema facilita la administración de una empresa, proporcionando un flujo de trabajo organizado para el seguimiento de pedidos y la gestión del inventario.
 
 ## Características Principales
