@@ -4,6 +4,7 @@ if (!isset($_SESSION["email"])) {
     header("Location: views/login.php");
     exit();
 }
+//hola
 include_once "models/database.php";
 include_once "models/functions.php";
 $nombre = $_SESSION["nombre"];
